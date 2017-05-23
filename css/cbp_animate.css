@@ -1,0 +1,113 @@
+/*
+  Essential classes for the blocks animation on page scroll
+  Source : http://tympanus.net/codrops/2013/07/18/on-scroll-effect-layout/
+*/
+
+.cbp-so-section {
+  position: relative;
+}
+
+.cbp-so-section:before, .cbp-so-section:after {
+  content: " ";
+  display: table;
+}
+
+.cbp-so-section:after {
+  clear: both;
+}
+
+.cbp-so-side:before, .cbp-so-side:after {
+  content: " ";
+  display: table;
+}
+
+.cbp-so-side:after {
+  clear: both;
+}
+
+.cbp-so-init .cbp-so-side {
+  opacity: 0;
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none;
+}
+
+.cbp-so-init .cbp-so-side-left {
+  -webkit-transform: translateX(-80px);
+  -moz-transform: translateX(-80px);
+  transform: translateX(-80px);
+}
+
+.cbp-so-init .cbp-so-side-right {
+  -webkit-transform: translateX(80px);
+  -moz-transform: translateX(80px);
+  transform: translateX(80px);
+}
+
+.cbp-so-init .cbp-so-side-bottom {
+  -webkit-transform: translateY(100px);
+  -moz-transform: translateY(100px);
+  transform: translateY(100px);
+}
+
+.cbp-so-init .cbp-so-side-top {
+  -webkit-transform: translateY(-100px);
+  -moz-transform: translateY(-100px);
+  transform: translateY(-100px);
+}
+
+.cbp-so-section.cbp-so-animate .cbp-so-side-left,
+.cbp-so-section.cbp-so-animate .cbp-so-side-left.left2,
+.cbp-so-section.cbp-so-animate .cbp-so-side-left.left3,
+.cbp-so-section.cbp-so-animate .cbp-so-side-bottom,
+.cbp-so-section.cbp-so-animate .cbp-so-side-top,
+.cbp-so-section.cbp-so-animate .cbp-so-side-right,
+.cbp-so-section.cbp-so-animate .cbp-so-side-right.right2,
+.cbp-so-section.cbp-so-animate .cbp-so-side-right.right3 {
+  -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+  -moz-transition: -moz-transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+.cbp-so-section.cbp-so-animate .cbp-so-side-left.left2 {
+  -webkit-transition-delay: 0.4s;
+  -moz-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+
+.cbp-so-section.cbp-so-animate .cbp-so-side-left.left3 {
+  -webkit-transition-delay: 0.6s;
+  -moz-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+
+.cbp-so-section.cbp-so-animate .cbp-so-side-right {
+  -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.cbp-so-section.cbp-so-animate .cbp-so-side-right.right2 {
+  transition-delay: 0.4s;
+}
+
+.cbp-so-section.cbp-so-animate .cbp-so-side-right.right3 {
+  transition-delay: 0.6s;
+}
+
+.cbp-so-section.cbp-so-animate .cbp-so-side-bottom {
+  transition-delay: 0.5s;
+}
+
+.cbp-so-section.cbp-so-animate .cbp-so-side-top {
+  transition-delay: 0.2s;
+}
+
+.cbp-so-section.cbp-so-animate .cbp-so-side-top.top_2 {
+  transition-delay: 0.4s;
+}
